@@ -5,23 +5,39 @@ const name = [
     "Deirdre", "Diana", "Elizabeth",
     "Ella", "Faith", "Olivia", "Penelope"
 ]
+const nama = "denny"
 const searchName = (arr, query, limit, cb) => {
-    const hasil = arr.filter(function (element) {
-        return element.toLowerCase().indexOf(query.toLowerCase()) !== -1 //jika ada query muncul Notreturn -1
-    })
-    cb(limit, hasil)
+    // cek apakah parameter arr bertype data array atau bukan
+    if (arr instanceof Array == true) {
+        if (typeof (query) == "string") {
+            if (typeof limit == "number") {
+                if (cb === showName) {
+                    const hasil = arr.filter((element) => {
+                        return element.toLowerCase().indexOf(query.toLowerCase()) !== -1
+                    })
+                    cb(limit, hasil)
+                } else {
+                    console.log("parameter cb harus diisi dengan fungsi showName");
+                }
+            } else {
+                console.log("parameter limit harus bertype data number");
+            }
+        } else {
+            console.log("parameter query harus bertype data number");
+        }
+    } else {
+        console.log("Parameter arr harus bertype array")
+    }
 }
 const showName = (limit, hasil) => {
-    let newArray = [];
-    for (let element of hasil) {
-        if (newArray.length >= limit) break;
-        newArray.push(element)
-    }
-    if (newArray.length == 0) {
-        console.log("data tidak ditemukan");
+    if (hasil.length > 0) {
+        console.log(hasil.slice(0, limit));
     } else {
-        console.log(newArray);
+        console.log("Data tidak ditemukan");
     }
 }
 
-(searchName(name, "o", 9, showName));
+(searchName(name, "an", 3, showName));
+(searchName(nama, "an", 9, showName));
+(searchName(name, "an", "9", showName));
+(searchName(name, "an", 3, "showNamess"));
