@@ -13,9 +13,9 @@
 
 //2.fill(value,start,end)
 //digunakan untuk mengganti value yang ada di array dimulai dari start sampai end 
-// const arr1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+// onst arr1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
 // const arr2 = arr1.fill("Durian", 2, 3)
-// console.log(arr2);
+// console.log(arr2);c
 
 // 3.pop()
 // digunakan untuk menghilangkan elemen terakhir dari dalam array,dan mengembalikan
@@ -48,7 +48,7 @@
 // 7.every()
 // mengecek semua data dalam array apakah memenuhi keadaan yang ditentukan jika iya maka return true
 // jika tidak return false
-// const dataArray = [1, 2, 3, 4, 6, 7, 8, 9, 5, "viola"]
+// const dataArray = [1, 2, 3, 4, 6, 7, 8, 9, 5]
 // const elementIsNumber = dataArray.every(function (index) {
 //     return typeof (index) == "number";
 // })
@@ -64,7 +64,7 @@
 //9.Array.from()
 // build in function yang punya nilai return sebuah array baru dari string
 
-// const b = Array.from("1234566677788")
+// const b = Array.from("1 234566677788")
 // console.log(b);
 
 //10.length
@@ -77,3 +77,4 @@
 // const b = [4, 5, 6, 4, 43, 32, 2]
 // const c = b.push("push diakhir")
 // console.log(b);
+// console.log(c);
